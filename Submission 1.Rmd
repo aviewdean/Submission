@@ -1,0 +1,41 @@
+---
+title: "My Coursera Submission"
+author: "Antje"
+date: "2025-06-23"
+output: pdf_document
+---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r PIMA in mlbench}
+# Install mlbench package
+install.packages("mlbench")
+
+# Load mlbench package
+library(mlbench)
+
+# Load PIMA dataset
+data(PimaIndiansDiabetes)
+
+# Overview of first rows of PIMA dataset
+head(PimaIndiansDiabetes)
+
+```
+```{r}
+# Load data PIMA
+data("PimaIndiansDiabetes")
+
+# Check structure
+str(PimaIndiansDiabetes)
+
+# Plot mass vs age
+plot(PimaIndiansDiabetes$age, PimaIndiansDiabetes$mass,
+     main = "BMI vs Age",
+     xlab = "Age (years)",
+     ylab = "BMI",
+     pch = 19,          
+     col = "blue")
+
+```
+
